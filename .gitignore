@@ -1,0 +1,12 @@
+# Ignore the raw dataset file (never upload giant data tracks to code repos)
+hour.csv
+
+# Ignore Python environment and execution cache folders
+__pycache__/
+*.pyc
+.venv/
+env/
+
+# Ignore local system temporary files
+.DS_Store
+Thumbs.db
