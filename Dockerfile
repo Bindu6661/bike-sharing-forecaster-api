@@ -18,5 +18,7 @@ COPY ./best_bike_sharing_model.joblib /code/best_bike_sharing_model.joblib
 EXPOSE 8000
 
 # 7. Start your Uvicorn live web server when the container launches
-CMD ["gunicorn", "app:app", "-w", "4", "-k", "uvicorn.workers.UvicornWorker", "-b", "0.0.0.0:8000"]
+# Replace your old CMD line with this dynamic version:
+CMD ["sh", "-c", "uvicorn app:app --host 0.0.0.0 --port ${PORT:-8000}"]
+
 
